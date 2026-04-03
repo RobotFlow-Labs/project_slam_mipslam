@@ -8,12 +8,21 @@ paper_arxiv = "2603.06989"
 [compute]
 backend = "auto"  # "mlx", "cuda", "auto"
 precision = "fp32"
+python_version = "3.11"
 
 [data]
-shared_volume = "/Volumes/AIFlowDev/RobotFlowLabs/datasets"
+shared_volume = "/Volumes/AIFlowDev/RobotFlowLabs"
 repos_volume = "/Volumes/AIFlowDev/RobotFlowLabs/repos/wave7"
 
 [hardware]
 zed2i = true
 unitree_l2_lidar = true
 cobot_xarm6 = false  # Set true when purchased
+
+[eval.replica]
+root = "/Volumes/AIFlowDev/RobotFlowLabs/datasets/replica"
+scales = ["2x", "1x", "1/2", "1/4", "1/8"]
+
+[eval.tum_rgbd]
+root = "/Volumes/AIFlowDev/RobotFlowLabs/datasets/tum_rgbd"
+scales = ["4x", "2x", "1x", "1/2", "1/4"]

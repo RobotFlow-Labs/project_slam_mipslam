@@ -1,4 +1,6 @@
-"""ANIMA SUSANOO — MipSLAM: Anti-Aliased 3DGS SLAM"""
-from .version import __version__
+"""Compatibility shim for the legacy scaffold package."""
 
-__all__ = ["__version__"]
+from anima_slam_mipslam import __version__, get_backend, get_device
+
+__all__ = ["__version__", "get_backend", "get_device"]
+

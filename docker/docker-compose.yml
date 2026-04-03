@@ -1,13 +1,9 @@
 version: "3.8"
 services:
-  susanoo:
+  slam-mipslam:
     build: .
     volumes:
-      - /Volumes/AIFlowDev/RobotFlowLabs/datasets:/data:ro
+      - /Volumes/AIFlowDev/RobotFlowLabs:/Volumes/AIFlowDev/RobotFlowLabs:ro
     environment:
-      - ANIMA_BACKEND=cuda
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]
+      - ANIMA_BACKEND=${ANIMA_BACKEND:-auto}
+

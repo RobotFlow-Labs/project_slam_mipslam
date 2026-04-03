@@ -1,31 +1,6 @@
-"""Dual-compute device abstraction — MLX + CUDA mandatory."""
-import os
+"""Compatibility shim for the legacy scaffold package."""
 
-BACKEND = os.environ.get("ANIMA_BACKEND", "auto")
+from anima_slam_mipslam.device import get_backend, get_device
 
-if BACKEND == "auto":
-    try:
-        import mlx.core as mx  # noqa: F401
-        BACKEND = "mlx"
-    except ImportError:
-        try:
-            import torch
-            BACKEND = "cuda" if torch.cuda.is_available() else "cpu"
-        except ImportError:
-            BACKEND = "cpu"
+__all__ = ["get_backend", "get_device"]
 
-
-def get_backend() -> str:
-    return BACKEND
-
-
-def get_device():
-    if BACKEND == "mlx":
-        import mlx.core as mx
-        return mx.default_device()
-    elif BACKEND == "cuda":
-        import torch
-        return torch.device("cuda")
-    else:
-        import torch
-        return torch.device("cpu")

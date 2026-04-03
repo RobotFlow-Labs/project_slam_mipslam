@@ -1,0 +1,14 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY pyproject.toml README.md ./
+RUN pip install uv && uv venv /opt/venv --python python3.11
+ENV PATH="/opt/venv/bin:${PATH}"
+RUN uv pip install --system -e ".[serve]"
+
+COPY src ./src
+COPY anima_module.yaml ./
+
+CMD ["uvicorn", "anima_slam_mipslam.serve:app", "--host", "0.0.0.0", "--port", "8000"]
+

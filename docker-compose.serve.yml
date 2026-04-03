@@ -1,0 +1,12 @@
+services:
+  mipslam-serve:
+    build:
+      context: .
+      dockerfile: Dockerfile.serve
+    ports:
+      - "8000:8000"
+    environment:
+      ANIMA_BACKEND: ${ANIMA_BACKEND:-cpu}
+    volumes:
+      - /Volumes/AIFlowDev/RobotFlowLabs:/Volumes/AIFlowDev/RobotFlowLabs:ro
+

@@ -21,9 +21,16 @@ SLAM
 ## Quick Start
 ```bash
 cd project_slam_mipslam
-uv venv .venv --python python3.11 && uv sync
-uv run pytest tests/ -v
+uv venv .venv --python python3.11
+uv sync --extra dev --extra serve
+uv run pytest tests/test_config.py tests/test_datasets.py tests/test_geometry.py -v
+uv run python -m anima_slam_mipslam
 ```
+
+## Runtime Notes
+- macOS prebuild path: MLX / MPS / CPU capable via `ANIMA_BACKEND=auto`
+- later CUDA path: `uv sync --extra dev --extra serve --extra cuda` on Linux GPU hosts
+- current training blocker: Replica and TUM RGB-D datasets are not mounted locally yet
 
 ## License
 MIT — AIFLOW LABS LIMITED

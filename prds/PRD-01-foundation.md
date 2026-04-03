@@ -2,7 +2,7 @@
 
 > Module: SLAM-MIPSLAM | Priority: P0
 > Depends on: None
-> Status: ⬜ Not started
+> Status: ✅ Done
 
 ## Objective
 Establish the canonical package layout, configuration system, RGB-D dataset adapters, and Gaussian/pose data contracts needed to implement MipSLAM faithfully.

@@ -3,20 +3,46 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "anima-susanoo"
+name = "anima-slam-mipslam"
 version = "0.1.0"
-description = "ANIMA SUSANOO — MipSLAM: Anti-Aliased 3DGS SLAM"
-requires-python = ">=3.10"
+description = "ANIMA SLAM-MIPSLAM — Alias-Free Gaussian Splatting SLAM foundation"
+readme = "README.md"
+requires-python = ">=3.11"
 dependencies = [
-    "torch>=2.0",
-    "numpy",
-    "opencv-python",
+    "numpy>=1.26",
+    "opencv-python>=4.10",
+    "pillow>=10.4",
+    "pydantic>=2.8",
+    "torch>=2.3",
+    "typing-extensions>=4.12",
 ]
 
 [project.optional-dependencies]
-mlx = ["mlx>=0.10", "mlx-nn"]
-dev = ["pytest", "ruff", "mypy"]
+dev = [
+    "mypy>=1.11",
+    "pytest>=8.3",
+    "ruff>=0.6",
+]
+mlx = [
+    "mlx>=0.16; platform_system == 'Darwin' and platform_machine == 'arm64'",
+]
+serve = [
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+]
+cuda = [
+    "triton>=3.0; platform_system == 'Linux' and platform_machine == 'x86_64'",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/anima_slam_mipslam", "src/anima_susanoo"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py310"
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

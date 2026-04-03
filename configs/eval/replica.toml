@@ -1,0 +1,5 @@
+dataset = "replica"
+root = "/Volumes/AIFlowDev/RobotFlowLabs/datasets/replica"
+scales = ["2x", "1x", "1/2", "1/4", "1/8"]
+expected_native_resolution = [680, 1200]
+

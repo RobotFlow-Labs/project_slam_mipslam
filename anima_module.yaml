@@ -1,0 +1,19 @@
+id: slam-mipslam
+name: SLAM-MIPSLAM
+domain: slam
+paper:
+  title: "MipSLAM: Alias-Free Gaussian Splatting SLAM"
+  arxiv: "2603.06989"
+runtime:
+  python: "3.11"
+  package_manager: uv
+  entrypoints:
+    module: "anima_slam_mipslam"
+    serve: "anima_slam_mipslam.serve:app"
+hardware:
+  mac_prebuild: true
+  cuda_train_ready: true
+  sensors:
+    - zed2i
+    - unitree_l2_lidar
+

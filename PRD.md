@@ -53,9 +53,9 @@ The implementation will be split into seven PRDs:
 ## 7. Implementation Phases
 
 ### Phase 1 — Foundation + Paper Recovery
-- [ ] Correct package layout and configs
-- [ ] Dataset loaders for Replica and TUM RGB-D
-- [ ] Gaussian / pose graph typed state
+- [x] Correct package layout and configs
+- [x] Dataset loaders for Replica and TUM RGB-D
+- [x] Gaussian / pose graph typed state
 - [ ] Resolve missing hyperparameters with documented inferred defaults
 
 ### Phase 2 — Core Method
@@ -100,7 +100,7 @@ The implementation will be split into seven PRDs:
 ## 12. Build Plan
 | PRD | Task | Status |
 |-----|------|--------|
-| [PRD-01](prds/PRD-01-foundation.md) | Foundation and data contracts | ⬜ |
+| [PRD-01](prds/PRD-01-foundation.md) | Foundation and data contracts | ✅ |
 | [PRD-02](prds/PRD-02-core-model.md) | EAA renderer, SA-PGO, losses | ⬜ |
 | [PRD-03](prds/PRD-03-inference.md) | Online SLAM inference loop | ⬜ |
 | [PRD-04](prds/PRD-04-evaluation.md) | Reproduction benchmarks and reports | ⬜ |

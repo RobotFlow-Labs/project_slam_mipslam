@@ -1,0 +1,5 @@
+dataset = "tum_rgbd"
+root = "/Volumes/AIFlowDev/RobotFlowLabs/datasets/tum_rgbd"
+scales = ["4x", "2x", "1x", "1/2", "1/4"]
+expected_native_resolution = [480, 640]
+

@@ -13,4 +13,3 @@ def test_eval_protocol_parses() -> None:
     protocol = load_eval_protocol(Path("configs/eval/replica.toml"))
     assert protocol.dataset == "replica"
     assert protocol.scales == ["2x", "1x", "1/2", "1/4", "1/8"]
-

@@ -20,19 +20,24 @@ This project covers exactly ONE paper: MipSLAM: Alias-Free Gaussian Splatting SL
 
 ## 3. Current Status
 - **Date**: 2026-04-03
-- **Phase**: PRD-02 preparation
-- **MVP Readiness**: 20%
+- **Phase**: PRD-03 implementation
+- **MVP Readiness**: 50%
 - **Accomplished**:
   1. Correct paper identified and downloaded locally
   2. `ASSETS.md`, `PIPELINE_MAP.md`, `prds/`, and `tasks/` generated
   3. Top-level `PRD.md` rewritten around the actual paper
   4. PRD-01 foundation implemented and validated on Python 3.11 with UV
   5. Missing infra files created: `anima_module.yaml`, `Dockerfile.serve`, `docker-compose.serve.yml`, `serve.py`
+  6. PRD-02 core model slice implemented: incremental 3D filter, EAA sampling / renderer, SA-PGO, and joint RGB-depth losses
+  7. Regression validation passed for PRD-01 and PRD-02 test suites on macOS Python 3.11
+  8. PRD-03 online inference scaffold implemented: tracking frontend, mapping backend, online loop, CLI path, and render-reuse smoke coverage
+  9. Full local validation now passes across 21 tests
 - **TODO**:
-  1. Start PRD-02 task `PRD-0201` incremental 3D filter
-  2. Start PRD-02 task `PRD-0202` elliptical-domain sampling
-  3. Download or mount Replica / TUM RGB-D benchmark sequences
-  4. Decide whether to mirror MonoGS/SplaTAM defaults for omitted hyperparameters
+  1. Harden PRD-03 backend scheduling so SA-PGO runs off the online path instead of the current synchronous cadence
+  2. Replace placeholder `run-sequence` CLI behavior with real dataset / config-driven sequence execution
+  3. Start PRD-04 evaluation and reproduction reporting
+  4. Download or mount Replica / TUM RGB-D benchmark sequences
+  5. Decide whether to mirror MonoGS/SplaTAM defaults for omitted hyperparameters
 - **Blockers**:
   1. Training remains blocked until Replica and TUM RGB-D are available locally or on the target CUDA host
 
@@ -62,3 +67,5 @@ This project covers exactly ONE paper: MipSLAM: Alias-Free Gaussian Splatting SL
 | 2026-04-03 | ANIMA Research Agent | Project scaffolded |
 | 2026-04-03 | Codex | Corrected paper source to arXiv 2603.06989 and generated PRD / task suite |
 | 2026-04-03 | Codex | Completed PRD-01 foundation prebuild, UV 3.11 environment, and infra scaffolding |
+| 2026-04-03 | Codex | Completed PRD-02 core model modules and validated renderer / SA-PGO / loss slice |
+| 2026-04-03 | Codex | Implemented PRD-03 tracking, mapping, online loop, CLI smoke path, and render-reuse tests |

@@ -2,7 +2,7 @@
 
 > Module: SLAM-MIPSLAM | Priority: P0
 > Depends on: PRD-01, PRD-02
-> Status: ⬜ Not started
+> Status: ◐ In progress
 
 ## Objective
 Build the online RGB-D SLAM loop that tracks, updates the Gaussian map, periodically runs SA-PGO, and re-renders the map under arbitrary camera resolutions and intrinsics.
@@ -13,12 +13,12 @@ Fig. 2 describes a pipeline where MipSLAM tracks RGB-D streams, selects keyframe
 **Paper reference**: Fig. 2, Sec. III, Sec. IV-A
 
 ## Acceptance Criteria
-- [ ] Online loop ingests sequential RGB-D frames and maintains a keyframe database plus covisibility graph.
-- [ ] Tracking path produces per-frame poses and rendered RGB-depth supervision for map updates.
+- [x] Online loop ingests sequential RGB-D frames and maintains a keyframe database plus covisibility graph.
+- [x] Tracking path produces per-frame poses and rendered RGB-depth supervision for map updates.
 - [ ] Backend runs SA-PGO asynchronously and feeds refined poses back into the map state.
-- [ ] Saved map can be re-rendered at Replica and TUM evaluation scales without changing scene content.
-- [ ] CLI entry supports `run-sequence`, `render-map`, and `export-trajectory`.
-- [ ] Test: `uv run pytest tests/test_online_slam.py tests/test_render_reuse.py -v` passes.
+- [x] Saved map can be re-rendered at Replica and TUM evaluation scales without changing scene content.
+- [x] CLI entry supports `run-sequence`, `render-map`, and `export-trajectory`.
+- [x] Test: `uv run pytest tests/test_online_slam.py tests/test_render_reuse.py -v` passes.
 
 ## Files to Create
 | File | Purpose | Paper Ref | Est. Lines |

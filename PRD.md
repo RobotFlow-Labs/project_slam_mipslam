@@ -101,8 +101,8 @@ The implementation will be split into seven PRDs:
 | PRD | Task | Status |
 |-----|------|--------|
 | [PRD-01](prds/PRD-01-foundation.md) | Foundation and data contracts | ✅ |
-| [PRD-02](prds/PRD-02-core-model.md) | EAA renderer, SA-PGO, losses | ⬜ |
-| [PRD-03](prds/PRD-03-inference.md) | Online SLAM inference loop | ⬜ |
+| [PRD-02](prds/PRD-02-core-model.md) | EAA renderer, SA-PGO, losses | ✅ |
+| [PRD-03](prds/PRD-03-inference.md) | Online SLAM inference loop | ◐ |
 | [PRD-04](prds/PRD-04-evaluation.md) | Reproduction benchmarks and reports | ⬜ |
 | [PRD-05](prds/PRD-05-api-docker.md) | API and Docker packaging | ⬜ |
 | [PRD-06](prds/PRD-06-ros2-integration.md) | ROS2 runtime bridge | ⬜ |

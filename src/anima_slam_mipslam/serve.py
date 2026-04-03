@@ -13,4 +13,3 @@ app = FastAPI(title="anima-slam-mipslam", version=__version__)
 @app.get("/healthz")
 def healthz() -> dict[str, str]:
     return {"status": "ok", "version": __version__, "backend": get_backend()}
-

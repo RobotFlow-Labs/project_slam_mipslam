@@ -12,4 +12,3 @@ def test_gaussian_covariance_is_3x3() -> None:
     )
     assert primitive.covariance.shape == (3, 3)
     assert primitive.mean.shape == (3,)
-

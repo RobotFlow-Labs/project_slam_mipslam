@@ -72,4 +72,3 @@ class PoseGraphState:
     poses: list[torch.Tensor]
     edges: list[PoseGraphEdge]
     laplacian_gap: float | None = None
-

@@ -51,4 +51,3 @@ def get_device():
     import torch
 
     return torch.device(_BACKEND.torch_device)
-

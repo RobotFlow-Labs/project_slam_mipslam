@@ -2,7 +2,7 @@
 
 > Module: SLAM-MIPSLAM | Priority: P0
 > Depends on: PRD-01
-> Status: ⬜ Not started
+> Status: ✅ Completed
 
 ## Objective
 Implement the two paper-novel cores of MipSLAM: Elliptical Adaptive Anti-aliasing (EAA) for Gaussian rendering and Spectral-Aware Pose Graph Optimization (SA-PGO) for drift suppression.
@@ -13,12 +13,12 @@ The paper’s contribution is not generic 3DGS SLAM. It specifically replaces po
 **Paper reference**: Sec. III-A, Sec. III-B, Sec. III-C, Eq. (1)-(15)
 
 ## Acceptance Criteria
-- [ ] Gaussian rendering uses integrated opacity from Eq. (6), not vanilla point sampling.
-- [ ] Incremental 3D filter from Eq. (3) updates per-Gaussian frequency support from active keyframes.
-- [ ] EAA sampling implements geometry- and boundary-aware importance weights from Eq. (5).
-- [ ] SA-PGO computes descriptors, spectral signatures, graph Laplacian decomposition, and the optimization objective from Eq. (8)-(14).
-- [ ] Joint training loss matches Eq. (15) with RGB and depth terms.
-- [ ] Test: `uv run pytest tests/test_eaa_renderer.py tests/test_sa_pgo.py tests/test_losses.py -v` passes.
+- [x] Gaussian rendering uses integrated opacity from Eq. (6), not vanilla point sampling.
+- [x] Incremental 3D filter from Eq. (3) updates per-Gaussian frequency support from active keyframes.
+- [x] EAA sampling implements geometry- and boundary-aware importance weights from Eq. (5).
+- [x] SA-PGO computes descriptors, spectral signatures, graph Laplacian decomposition, and the optimization objective from Eq. (8)-(14).
+- [x] Joint training loss matches Eq. (15) with RGB and depth terms.
+- [x] Test: `uv run pytest tests/test_eaa_renderer.py tests/test_sa_pgo.py tests/test_losses.py -v` passes.
 
 ## Files to Create
 | File | Purpose | Paper Ref | Est. Lines |

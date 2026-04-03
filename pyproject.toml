@@ -17,6 +17,9 @@ dependencies = [
     "typing-extensions>=4.12",
 ]
 
+[project.scripts]
+anima-slam-mipslam = "anima_slam_mipslam.cli.run_slam:main"
+
 [project.optional-dependencies]
 dev = [
     "mypy>=1.11",

@@ -1,13 +1,14 @@
 # SLAM-MIPSLAM
 
 ## Paper
-**MipSLAM: Anti-Aliased 3DGS SLAM**
-arXiv: https://arxiv.org/abs/2503.15908
+**MipSLAM: Alias-Free Gaussian Splatting SLAM**
+arXiv: https://arxiv.org/abs/2603.06989
 
 ## Module Identity
 - Codename: SLAM-MIPSLAM
 - Domain: SLAM
 - Part of ANIMA Intelligence Compiler Suite
+- Source note: official GitHub repo exists but was empty when this project was scaffolded
 
 ## Structure
 ```

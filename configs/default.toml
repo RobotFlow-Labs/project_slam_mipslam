@@ -1,9 +1,9 @@
 [project]
-name = "anima-susanoo"
-codename = "SUSANOO"
+name = "anima-slam-mipslam"
+codename = "SLAM-MIPSLAM"
 functional_name = "SLAM-mipslam"
 wave = 7
-paper_arxiv = "2503.15908"
+paper_arxiv = "2603.06989"
 
 [compute]
 backend = "auto"  # "mlx", "cuda", "auto"
